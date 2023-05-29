@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agri Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url("bg4.jpg");
+            background-size: cover;
+            /* background-color: #fff; */
+        }
+
+        .side-navbar {
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            margin-left: -300px;
+            background: rgba(255, 255, 255, 0.192);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.231);
+            /* background-color: #100901; */
+            /* background: rgb(2, 0, 36); */
+            /* background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
+            transition: 0.5s;
+        }
+
+        .nav-link:active,
+        .nav-link:focus,
+        .nav-link:hover {
+            background-color: #ffffff26;
+        }
+
+        .my-container {
+            transition: 0.4s;
+        }
+
+        .active-nav {
+            margin-left: 0;
+        }
+
+        .active-cont {
+            margin-left: 200px;
+        }
+
+        #menu-btn {
+            background-color: #010531;
+            color: #fff;
+            margin-left: -62px;
+        }
+
+        .my-container input {
+            border-radius: 2rem;
+            padding: 2px 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+            text-shadow: 0px 0px 5px white;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .textbox {
+            width: 90%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.331);
+        }
+
+        .askbtn {
+            background-color: rgba(0, 212, 255, 1);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.331);
+        }
+    </style>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-lg-top" style="background: rgba(255, 255, 255, 0.192);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281); height: 4rem;">
+        <div class="container-fluid  ">
+            <a class="navbar-brand" href="index.html">
+                <img src="logoenb.png" alt="Bootstrap" width="200" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav text-light" style="color: rgb(0, 0, 0);">
+
+                    <li class="nav-item">
+                        <a class="nav-link  glow" href="/logout" style="color: rgb(0, 0, 0);transition: 0.5s; "
+                            target="_blank">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+        <ul class="nav flex-column text-white w-100">
+            <br>
+            <a href="/dashboard" class="nav-link h5 text-black my-2" style="color: black;">
+                Chat With Us
+            </a>
+            <hr style="border-top: 1px black solid;">
+            <a href="/weather" class="nav-link h5 text-black my-2" style="color: black;">
+                Weather Forecast
+            </a>
+            <hr style="border-top: 1px black solid;">
+            <a href="/call" class="nav-link h5 text-black my-2" style="color: black;">
+                Connect with Expert
+            </a>
+            <hr style="border-top: 1px black solid;">
+            <a href="/interact" class="nav-link h5 text-black my-2" style="color: black;">
+                Interact
+            </a>
+            <hr style="border-top: 1px black solid;">
+
+        </ul>
+
+    </div>
+
+
+    <div class="p-1 my-container active-cont">
+
+        <a id="google_translate_element" class="translate"></a>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,hi,bn,te,mr,ta,gu,kn,ml,pa,or,as,ks,ne,ur,es',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <div class="container">
+
+            <% var arj='a' %>
+                <%if(ans==arj){ %>
+
+                    <br>
+                    <form action="/chatgpt" method="POST">
+                        <input type="text" name="text" class="textbox">
+                        <input type="submit" value="Ask" class="askbtn">
+                    </form>
+                    <% } %>
+                        <% if (ans!=arj) { %>
+                            <br>
+                            <form action="/chatgpt" method="POST">
+                                <input type="text" name="text" class="textbox">
+                                <input type="submit" value="Ask" class="askbtn">
+                            </form>
+                            <br><br>
+                            <b>
+                                <%= ans %>
+
+                            </b>
+                            <% } %>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        var menu_btn = document.querySelector("#menu-btn");
+        var sidebar = document.querySelector("#sidebar");
+        var container = document.querySelector(".my-container");
+        menu_btn.addEventListener("click", () => {
+            sidebar.classList.toggle("active-nav");
+            container.classList.toggle("active-cont");
+        });
+
+        var counter = 0;
+
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+
+            var sun = document.getElementById("sun");
+            var moon = document.getElementById("moon");
+            if (counter % 2 === 0) {
+                moon.style.display = "none";
+                sun.style.display = "";
+            } else {
+                moon.style.display = "";
+                sun.style.display = "none";
+            }
+            counter++;
+        }
+    </script>
+</body>
+
+</html>

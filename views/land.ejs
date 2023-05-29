@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ask Expert</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Silkscreen&family=Tillana&display=swap');
+
+    * {
+      font-family: 'Tillana', cursive;
+      overflow: hidden;
+    }
+
+    .glow {
+      filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.587));
+    }
+
+    .a {
+      margin-left: 30%;
+      margin-top: 7%;
+      animation: glowww 2s infinite;
+      filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.648));
+    }
+
+    @keyframes glowww {
+      20% {
+        transform: scale(1.1);
+        filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.468));
+      }
+    }
+
+    .getting {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .getbtn {
+      animation: glowwww 3s infinite;
+      padding: 10px 15px 10px 15px;
+      margin: 10px;
+      color: rgb(255, 255, 255);
+      background: rgba(0, 0, 0, 0.372);
+      font-family: 'Tillana', cursive;
+      outline: none;
+      border-radius: 10px;
+      border: none;
+      transition: 0.3s all ease-in-out;
+      text-shadow: 0px 0px 10px rgb(255, 255, 255);
+      box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    }
+
+    .getbtn:hover {
+      background: rgba(255, 255, 255, 0.477);
+      color: black;
+      text-shadow: 0px 0px 10px rgb(0, 0, 0);
+      border: 0.1px solid black;
+    }
+
+    @keyframes glowwww {
+      40% {
+        transform: scale(1.1);
+      }
+    }
+
+    .boxx {
+      background-color: rgba(0, 0, 0, 0.183);
+      border-radius: 20px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 250px;
+      margin: 150px 500px;
+    }
+
+    .boxx a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .langbtn {
+      padding: 10px 15px 10px 15px;
+      margin: 10px;
+      color: rgb(255, 255, 255);
+      background: rgba(0, 0, 0, 0.372);
+      font-family: 'Tillana', cursive;
+      width: 170px;
+      outline: none;
+      border-radius: 10px;
+      border: none;
+      text-shadow: 0px 0px 10px rgb(255, 255, 255);
+      box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body style="background:url(bg.jpg); background-size: cover; font-family: 'Tillana', cursive;">
+
+  <nav class="navbar navbar-expand-lg bg-transparent justify-content-end">
+
+    <a class="navbar-brand" href="#">
+      <img src="logoen.png" class="glow" alt="Bootstrap" width="200" height="40">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  " style="margin-left: 70%;" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/languages" style="color:white; text-shadow: 0px 0px 10px white;">Getting
+            Started</a>
+        </li>
+
+
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleAutoplaying" class="carousel slide a" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="1500">
+        <img src="logoenbig.png" class="d-block w-50 glow" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="logohi.png" class="d-block w-50 glow" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="logote.png" class="d-block w-50 glow" alt="...">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="getting">
+    <a href="/languages">
+      <button class="getbtn" id="Geeks">Getting Started</button>
+    </a>
+  </div>
+
+  <script>
+    const button = document.getElementById("Geeks");
+
+    const buttonTexts = ["Getting Started", "ప్రారంభించండి", "आरंभ करें"];
+
+    let index = 0;
+
+    setInterval(() => {
+
+      button.innerText = buttonTexts[index];
+
+      index = (index + 1) % buttonTexts.length;
+
+    }, 2000);
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

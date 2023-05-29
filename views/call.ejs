@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agri Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .card {
+            box-shadow: 0 0 10px white;
+            border-radius: 2px;
+            margin: 10px;
+            margin-top: 30px;
+        }
+
+        body {
+            min-height: 100vh;
+            /* background-color: #fff; */
+        }
+
+        body {
+            text-align: center;
+            background: url("bg3.jpg");
+            background-size: cover;
+        }
+
+        .boxx {
+            justify-content: center;
+            background-color: rgba(240, 248, 255, 0.45);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.185);
+            width: 300px;
+            margin-top: 15%;
+            padding: 50px;
+            border-radius: 20px;
+            margin-left: 37%;
+        }
+
+        .inp {
+            border-radius: 5px;
+            border: 0.2px solid black;
+            margin-top: 20px;
+            height: 40px;
+            background-color: rgba(240, 248, 255, 0.495);
+        }
+
+        .inp:hover {
+            transform: scale(1.02);
+            transition: 0.2s ease;
+        }
+
+        .side-navbar {
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            margin-left: -300px;
+            /* background-color: #100901; */
+            background: rgba(255, 255, 255, 0.192);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
+            /* background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
+            transition: 0.5s;
+        }
+
+        .nav-link:active,
+        .nav-link:focus,
+        .nav-link:hover {
+            background-color: #ffffff26;
+        }
+
+        .my-container {
+            transition: 0.4s;
+        }
+
+        .active-nav {
+            margin-left: 0;
+        }
+
+        .active-cont {
+            margin-left: 200px;
+        }
+
+        .my-container input {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+            text-shadow: 0px 0px 5px white;
+        }
+
+        .textbox {
+            width: 90%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.331);
+        }
+
+        .askbtn {
+            background-color: rgba(0, 212, 255, 1);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.331);
+        }
+
+        #a {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #sry {
+            margin-top: 130px;
+            margin-left: 200px;
+            text-align: center;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-lg-top" style="height: 4rem; background: rgba(255, 255, 255, 0.192);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);">
+        <div class="container-fluid  ">
+            <a class="navbar-brand" href="index.html">
+                <img src="logoenb.png" alt="Bootstrap" width="200" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav text-light" style="color: rgb(0, 0, 0);">
+
+                    <li class="nav-item">
+                        <a class="nav-link  glow" href="/logout" style="color: rgb(0, 0, 0);transition: 0.5s; "
+                            target="_blank">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+        <ul class="nav flex-column text-white w-100">
+            <br>
+            <a href="/dashboard" class="nav-link h5 text-black my-2" style="color: black;">
+                Chat With Us
+            </a>
+            <hr style="border-top: 1px black solid;">
+            <a href="/weather" class="nav-link h5 text-black my-2" style="color: black;">
+                Weather Forecast
+            </a>
+            <hr style="border-top: 1px black solid;">
+            <a href="/call" class="nav-link h5 text-black my-2" style="color: black;">
+                Connect with Expert
+            </a>
+            <hr style="border-top: 1px black solid;">
+            <a href="/interact" class="nav-link h5 text-black my-2" style="color: black;">
+                Interact
+            </a>
+            <hr style="border-top: 1px black solid;">
+        </ul>
+
+    </div>
+
+
+    <div class="p-1 my-container active-cont">
+
+
+        <a id="google_translate_element" class="translate"></a>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,hi,bn,te,mr,ta,gu,kn,ml,pa,or,as,ks,ne,ur',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <div>
+            <form action="/call" method="post" style="float:right">
+                <input type="text" name="lang" placeholder="Enter Language">
+                <input type="submit" value="search">
+            </form>
+        </div>
+
+        <div id="a">
+            <% for(var i=0;i<data.length;i++) { %>
+                <div class="card" style="width: 16rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= data[i].name %>
+                        </h5>
+                        <p>
+                            <%= data[i].mail %>
+                                </>
+                                <a href="tel:<%=data[i].phone%>" class="btn btn-primary">Call me at
+                                    <%=data[i].phone %>
+                                </a>
+                    </div>
+                </div>
+                <% } %>
+                    <% if(data.length==0) { %>
+                        <h2 id="sry">Sorry,No experts found in that language</h2>
+                        <% } %>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

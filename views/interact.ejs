@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agri Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url("bg4.jpg");
+            background-size: cover;
+            /* background-color: #fff; */
+        }
+
+        .side-navbar {
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            margin-left: -300px;
+            background: rgba(255, 255, 255, 0.192);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.231);
+            /* background-color: #100901; */
+            /* background: rgb(2, 0, 36); */
+            /* background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
+            transition: 0.5s;
+        }
+
+        .nav-link:active,
+        .nav-link:focus,
+        .nav-link:hover {
+            background-color: #ffffff26;
+        }
+
+        .my-container {
+            transition: 0.4s;
+        }
+
+        .active-nav {
+            margin-left: 0;
+        }
+
+        .active-cont {
+            margin-left: 200px;
+        }
+
+        #menu-btn {
+            background-color: #010531;
+            color: #fff;
+            margin-left: -62px;
+        }
+
+        .my-container input {
+            border-radius: 2rem;
+            padding: 2px 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+            text-shadow: 0px 0px 5px white;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .textbox {
+            width: 90%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.331);
+        }
+
+        .askbtn {
+            background-color: rgba(0, 212, 255, 1);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.331);
+        }
+
+        #kir {
+            width: 10%;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px grey;
+        }
+    </style>
+    <script>
+        function crop() {
+            var a = document.getElementById("crop");
+            if (a.style.display == "none") {
+                a.style.display = "block";
+            } else {
+                a.style.display = "none";
+            }
+        }
+
+        function price() {
+            var a = document.getElementById("price");
+            if (a.style.display == "none") {
+                a.style.display = "block";
+            } else {
+                a.style.display = "none";
+            }
+        }
+
+        function brinjal() {
+            var a = document.getElementById("brinjal");
+            if (a.style.display == "none") {
+                a.style.display = "block";
+            } else {
+                a.style.display = "none";
+            }
+        }
+
+        function carrot() {
+            var a = document.getElementById("carrot");
+            if (a.style.display == "none") {
+                a.style.display = "block";
+            } else {
+                a.style.display = "none";
+            }
+        }
+
+        function potato() {
+            var a = document.getElementById("potato");
+            if (a.style.display == "none") {
+                a.style.display = "block";
+            } else {
+                a.style.display = "none";
+            }
+        }
+
+        function cucumber() {
+            var a = document.getElementById("cucumber");
+            if (a.style.display == "none") {
+                a.style.display = "block";
+            } else {
+                a.style.display = "none";
+            }
+        }
+
+        function msp() {
+            var a = document.getElementById("msp");
+            if (a.style.display == "none") {
+                a.style.display = "block";
+            } else {
+                a.style.display = "none";
+            }
+        }
+
+        function demand() {
+            var a = document.getElementById("demand");
+            if (a.style.display == "none") {
+                a.style.display = "block";
+            } else {
+                a.style.display = "none";
+            }
+        }
+
+        function tech() {
+            var a = document.getElementById("tech");
+            if (a.style.display == "none") {
+                a.style.display = "block";
+            } else {
+                a.style.display = "none";
+            }
+        }
+    </script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-lg-top" style="background: rgba(255, 255, 255, 0.192);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281); height: 4rem;">
+        <div class="container-fluid  ">
+            <a class="navbar-brand" href="index.html">
+                <img src="logoenb.png" alt="Bootstrap" width="200" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav text-light" style="color: rgb(0, 0, 0);">
+
+                    <li class="nav-item">
+                        <a class="nav-link  glow" href="/logout" style="color: rgb(0, 0, 0);transition: 0.5s; "
+                            target="_blank">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+        <ul class="nav flex-column text-white w-100">
+            <br>
+            <a href="/dashboard" class="nav-link h5 text-black my-2" style="color: black;">
+                Chat With Us
+            </a>
+            <hr style="border-top: 1px black solid;">
+            <a href="/weather" class="nav-link h5 text-black my-2" style="color: black;">
+                Weather Forecast
+            </a>
+            <hr style="border-top: 1px black solid;">
+            <a href="/call" class="nav-link h5 text-black my-2" style="color: black;">
+                Connect with Expert
+            </a>
+            <hr style="border-top: 1px black solid;">
+            <a href="/interact" class="nav-link h5 text-black my-2" style="color: black;">
+                Interact
+            </a>
+            <hr style="border-top: 1px black solid;">
+
+        </ul>
+
+    </div>
+
+
+    <div class="p-1 my-container active-cont">
+
+        <a id="google_translate_element" class="translate"></a>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,hi,bn,te,mr,ta,gu,kn,ml,pa,or,as,ks,ne,ur,es',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <div class="container" style="text-align:center">
+            <br><br>
+            <h3>Hii User, How can I Help U !</h3>
+            <h5>select the type of query</h5><br>
+            <div>
+                <button id="kir" onclick=crop()>Crop related</button><br>
+                <button id="kir" onclick=price()>Price Related</button><br>
+            </div>
+            <div id="crop" style="display:none">
+                <h4>Ok, Here are the queries about crops</h4>
+                <button id="kir" onclick=tech()>Latest technologies</button>
+                <div id="tech" style="display:none">
+                    <p>Precision agriculture</p>
+                    <p>Vertical farming</p>
+                    <p>Robotics and automation</p>
+                    <h5>Thank you :)</h5>
+                </div>
+            </div>
+            <div id="price" style="display:none">
+                <h4>Ok, Here are the queries about price</h4>
+                <button id="kir" onclick=msp()>Show MSP prices</button>
+                <button id="kir" onclick=demand()>Show Demand goods</button>
+                <div id="msp" style="display:none">
+                    <h4>Ok,Select the product to know its MSP</h4>
+                    <button id="kir" onclick=brinjal()>Brinjal</button>
+                    <button id="kir" onclick=carrot()>Carrot</button>
+                    <button id="kir" onclick=potato()>Potato</button>
+                    <button id="kir" onclick=cucumber()>Cucumber</button>
+                </div>
+                <div id="demand" style="display:none">
+                    <h5>The current demand goods are tomatoes and onions</h5>
+                    <h5>Thank you :)</h5>
+                </div>
+                <div id="brinjal" style="display:none">
+                    <h5>MSP Cost of Brinjals are 30 per kg</h5>
+                    <h5>Thank you :)</h5>
+                </div>
+                <div id="carrot" style="display:none">
+                    <h5>MSP Cost of Carrot are 40 per kg</h5>
+                    <h5>Thank you :)</h5>
+                </div>
+                <div id="potato" style="display:none">
+                    <h5>MSP Cost of Potato are 20 per kg</h5>
+                    <h5>Thank you :)</h5>
+                </div>
+                <div id="cucumber" style="display:none">
+                    <h5>MSP Cost of Cucumber are 45 per kg</h5>
+                    <h5>Thank you :)</h5>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        var menu_btn = document.querySelector("#menu-btn");
+        var sidebar = document.querySelector("#sidebar");
+        var container = document.querySelector(".my-container");
+        menu_btn.addEventListener("click", () => {
+            sidebar.classList.toggle("active-nav");
+            container.classList.toggle("active-cont");
+        });
+
+        var counter = 0;
+
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+
+            var sun = document.getElementById("sun");
+            var moon = document.getElementById("moon");
+            if (counter % 2 === 0) {
+                moon.style.display = "none";
+                sun.style.display = "";
+            } else {
+                moon.style.display = "";
+                sun.style.display = "none";
+            }
+            counter++;
+        }
+    </script>
+</body>
+
+</html>
